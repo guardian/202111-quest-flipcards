@@ -166,7 +166,7 @@ const buildCSS = () => {
             atomPath: `<%= atomPath %>`
         }))
         // .pipe(postcss([autoprefixer()]))
-        .pipe(postcss([tailwindcss(tailwindcssConfig)]))
+        .pipe(postcss([tailwindcss(tailwindcssConfig), autoprefixer()]))
         .pipe(isDeploy ? cleanCSS({ compatibility: 'ie8' }) : gutil.noop())
         .pipe(dest(".build"))
         .pipe(browser.stream({

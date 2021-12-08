@@ -1,9 +1,15 @@
 import { Component, render, h } from "preact";
 import { useRef } from "preact/hooks";
+
 import FlipIcon from "./FlipIcon";
 
 export default class FlipCard extends Component {
 
+    constructor() {
+        super();
+
+        // this.ref = useRef();
+    }
     componentWillMount() {
         this.setState({'flipped': false});
     }
@@ -16,9 +22,9 @@ export default class FlipCard extends Component {
         this.setState({'flipped': !this.state.flipped});
     }
 
-    ref = useRef();
-
+    
     render(props, state) {
+        this.ref = useRef(); 
         
         // const img = props.id == '1' ? `<%= path %>/1.jpg`: `<%= path %>/card_${props.id}.svg`;
         return (
