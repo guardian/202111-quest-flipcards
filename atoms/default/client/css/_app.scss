@@ -184,6 +184,7 @@ section.footer {
   margin-top: 1rem;
   a {
     font-size: .8em;
+    font-weight: normal;
     color: currentColor;
   }
 }
@@ -301,7 +302,9 @@ section.footer {
     margin-top: 0;
   }
   @include mq(tablet) {
-
+    p {
+      margin-top: 1rem;
+    }
     position: absolute;
     top: 0;
     right: 0;
