@@ -65,15 +65,15 @@ const Loading = () =>
         </div>
     </FlexContainer>
 
-
 const Attribution = ({content}) => {
     return (
         <div className="attribution">
             <p>Paid for by 
-                <a href={content.logoLink} target="_blank">
+                <a className="mt-4 block" href={content.logoLink} target="_blank">
                     <Logo />
                 </a>
             </p>
+            <div className="about-content" dangerouslySetInnerHTML={setHtml(content.aboutLink)} />
         </div>
     )
 }
